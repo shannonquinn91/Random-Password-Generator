@@ -46,8 +46,13 @@ function generatePassword() {
     alert('Please click OK on at least one character type to generate password.')
     return;
     }
-  
-
+    //combines four arrays to one including all characters
+    var allCharacters = lowerCase.concat(upperCase, specCharacters, num);
+    for (var i = 0; i < length; i++) {
+      var index = Math.floor(Math.random () * allCharacters.length);
+      var password = allCharacters[index]
+    }
+  return password;
 
 }
 
