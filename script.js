@@ -18,23 +18,27 @@ var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 function generatePassword() {
   var length = prompt('How many characters do you want in your password?');
-    if (isNaN(length)){
+  //make sure user entered a number and if they didn't...  
+  if (isNaN(length)){
       alert('Your password length must be a number between 8 and 129')
       return; 
     }
+    //make sure user entered a number greater than 8 and if they didn't...
     if (length < 8){
       alert('Your password must be at least 8 characters.')
       return;
     }
-    if (length < 128){
+    //make sure user entered a number less than 128 and if they didn't...
+    if (length > 128){
       alert('Your password must be less than 128 characters.')
       return;
     }
+  //Confirm for other types of characters
   var includeLowerCase = confirm('Click OK to include lower case characters in your password.');
   var includeUpperCase = confirm('Click OK to include upper case characters in your password.');
   var includeSpecCharacters = confirm('Click OK to include special characters in your password.');
   var includeNums = confirm('Click OK to include numeric characters in your password.');
-  
+  //Requires user to confirm at least one type of character
   if (includeLowerCase === false && 
     includeUpperCase === false && 
     includeSpecCharacters === false && 
@@ -42,6 +46,9 @@ function generatePassword() {
     alert('Please click OK on at least one character type to generate password.')
     return;
     }
+  
+
+
 }
 
 
