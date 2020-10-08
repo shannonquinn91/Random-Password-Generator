@@ -47,8 +47,22 @@ function generatePassword() {
     return;
     }
     //combines four arrays to one including all characters
-    var allCharacters = lowerCase.concat(upperCase, specCharacters, num);
-    for (var i = 0; i < length; i++) {
+    var allCharacters = []
+      if (includeLowerCase) {
+        allCharacters.push(lowerCase)
+      }
+      if (includeUpperCase) {
+        allCharacters.push(upperCase)
+      }
+      if (includeSpecCharacters) {
+        allCharacters.push(specCharacters)
+      }
+      if (includeNums) {
+        allCharacters.push(num)
+      }
+      console.log(allCharacters);
+    //loop through array of all characters the number of times the user enters as length
+    for (var i = 0; i <= length; i++) {
       var index = Math.floor(Math.random () * allCharacters.length);
       var password = allCharacters[index]
     }
