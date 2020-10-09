@@ -29,5 +29,5 @@ Then I used password to make sure the loop puts a random character in the string
 
 ![Open Page]("./Assets/shannonquinn91.github.io_Random-Password-Generator_.png"); 
 
+![With Password]("./Assets/shannonquinn91.github.io_Random-Password-Generator_.png"); 
 
-![With Password]("./Assets/shannonquinn91.github.io_Random-Password-Generator_ (1).png"); 
