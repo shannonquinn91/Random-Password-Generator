@@ -10,11 +10,10 @@ function writePassword() {
 
 }
 
-var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q,', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-var specCharacters = ['!', '@', '#', '$', '?', '~']; 
-var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
+//var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+//var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q,', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+//var specCharacters = ['!', '@', '#', '$', '?', '~']; 
+//var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function generatePassword() {
   var length = prompt('How many characters do you want in your password?');
@@ -46,25 +45,28 @@ function generatePassword() {
     alert('Please click OK on at least one character type to generate password.')
     return;
     }
-    //combines four arrays to one including all characters
+  
+    //combines available characters to one large array including all characters
     var allCharacters = []
       if (includeLowerCase) {
-        allCharacters.push(lowerCase)
+        allCharacters.push('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
       }
       if (includeUpperCase) {
-        allCharacters.push(upperCase)
+        allCharacters.push('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q,', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z')
       }
       if (includeSpecCharacters) {
-        allCharacters.push(specCharacters)
+        allCharacters.push('!', '@', '#', '$', '?', '~')
       }
       if (includeNums) {
-        allCharacters.push(num)
+        allCharacters.push(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
       }
-      console.log(allCharacters);
-    //loop through array of all characters the number of times the user enters as length
-    for (var i = 0; i <= length; i++) {
+
+      var password = "";
+
+      //loop through array of all characters the number of times the user enters as length
+    for (var i = 1; i <= length; i++) {
       var index = Math.floor(Math.random () * allCharacters.length);
-      var password = allCharacters[index]
+      password += allCharacters[index];
     }
   return password;
 
