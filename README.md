@@ -27,7 +27,7 @@ Next, I chose to use a for loop using the length of the new array allCharacters.
 
 Then I used password to make sure the loop puts a random character in the string called password, which will appear in the box on the page. This for loop will run continuosly for the number of characters the user specified in the prompt using the variable length. 
 
-![Open Page]("Assets/shannonquinn91.github.io_Random-Password-Generator_.png"); 
+![Open Page]("./Assets/shannonquinn91.github.io_Random-Password-Generator_.png"); 
 
 
-![With Password]("Assets/shannonquinn91.github.io_Random-Password-Generator_(1).png"); 
+![With Password]("./Assets/shannonquinn91.github.io_Random-Password-Generator_ (1).png"); 
